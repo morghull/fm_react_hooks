@@ -1,0 +1,26 @@
+$width: 300px;
+.container {
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: -$width;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: tomato;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.5s;
+}
+.list {
+  list-style: none;
+  a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-bottom: .125rem solid transparent;
+    &:hover {
+      border-bottom-color: green;
+    }
+  }
+}
