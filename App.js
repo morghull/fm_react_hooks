@@ -19,22 +19,27 @@ function App() {
     setTheme((theme) => (theme === 'light' ? 'dark' : 'light'));
   };
 
-  const [state, dipatch] = useReducer(reducer, { isMenuOpen: false });
+  const [state, dispatch] = useReducer(reducer, { isMenuOpen: false });
+  const openMenu = () => dispatch({ type: ACTIONS.MENU_OPEN });
+
+  const closeMenu = () => dispatch({ type: ACTIONS.MENU_CLOSE });
 
   return (
     <>
-      <ThemeContext.Provider value={theme}>
-        <UserContext.Provider value={user}>
-          <BrowserRouter>
-            <MenuOpenIcon />
-            <NavMenu />
-            <button onClick={handlerClick}>switch theme</button>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </BrowserRouter>
-        </UserContext.Provider>
-      </ThemeContext.Provider>
+      <AppContext.Provider value={{ state, closeMenu }}>
+        <ThemeContext.Provider value={theme}>
+          <UserContext.Provider value={user}>
+            <BrowserRouter>
+              <MenuOpenIcon onClick={openMenu} />
+              <NavMenu />
+              <button onClick={handlerClick}>switch theme</button>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+              </Routes>
+            </BrowserRouter>
+          </UserContext.Provider>
+        </ThemeContext.Provider>
+      </AppContext.Provider>
     </>
   );
 }

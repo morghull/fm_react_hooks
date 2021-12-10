@@ -11,6 +11,9 @@ $width: 300px;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: left 0.5s;
 }
+.opem {
+  left: 0;
+}
 .list {
   list-style: none;
   a {
