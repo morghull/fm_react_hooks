@@ -1,6 +1,6 @@
 import React, { useState, useContext, useCallback } from 'react';
-import UserProfile from './UserProfile';
-import {ThemeContext} from './contexts'
+import UserProfile from '../components/UserProfile/UserProfile';
+import {ThemeContext} from '../contexts'
 import CONSTANTS from './constants';
 const { THEMES } = CONSTANTS;
 

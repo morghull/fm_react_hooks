@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { UserContext } from './contexts';
-import { ThemeContext } from './contexts';
+import { UserContext } from '../../contexts';
+import { ThemeContext } from '../../contexts';
 
 const UserProfile = () => {
   const user = useContext(UserContext);

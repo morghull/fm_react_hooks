@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from 'react';
-import { getChat } from '../api';
+import { getChat } from '../../api';
 import reducer from './reducer';
 
 const Chat = () => {
