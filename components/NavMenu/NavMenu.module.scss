@@ -5,7 +5,6 @@ $width: 300px;
   flex-direction: column;
   position: fixed;
   left: -$width;
-  left: 0;
   top: 0;
   bottom: 0;
   background-color: tomato;
@@ -18,9 +17,15 @@ $width: 300px;
     display: block;
     padding: 0.5rem;
     text-decoration: none;
-    border-bottom: .125rem solid transparent;
+    border-bottom: 0.125rem solid transparent;
+    color: #fff;
     &:hover {
-      border-bottom-color: green;
+      border-bottom-color: #fff;
     }
   }
+}
+.closeBtn {
+  margin-left: auto;
+  color: #fff;
+  padding: 0.5rem;
 }
